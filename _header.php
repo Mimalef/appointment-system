@@ -20,7 +20,7 @@
         }
         button
         {
-            width: 161px;
+            width: 122px;
             height: 44px;
             margin: 14px;
         }
@@ -78,8 +78,9 @@
         </div>
         <div id="tabs">
             <a href="index.php"><button id="home">خانه</button></a>
-            <a href="admin_login.php"><button id="gallery">ورود مدیر</button></a>
-            <a href="doctor_login.php"><button id="about">ورود پزشکان</button></a>
+            <a href="admin_login.php"><button id="gallery">پنل مدیر</button></a>
+            <a href="doctor_login.php"><button id="about">پنل پزشکان</button></a>
             <a href="patient_login.php"><button id="connect">رزرو وقت</button></a>
+            <a href="logout.php"><button id="connect">خروج</button></button></a>
         </div>
         <div id="main">

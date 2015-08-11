@@ -1,13 +1,7 @@
 <?php
-session_start();
-
 include "_conn.php";
 include "_header.php";
-
-if(!isset($_SESSION['admin_id']))
-{
-    header('location: index.php');
-}
+include "_admin_permission.php";
 
 if(isset($_GET['submit']))
 {
