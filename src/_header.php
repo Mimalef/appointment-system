@@ -90,9 +90,9 @@
         </div>
         <div id="tabs">
             <a class="button" href="index.php">خانه</a>
-            <a class="button" href="admin_login.php">پنل مدیر</a>
+            <a class="button" href="admin_login.php">پنل مدیران</a>
             <a class="button" href="doctor_login.php">پنل پزشکان</a>
-            <a class="button" href="patient_login.php">رزرو وقت</a>
+            <a class="button" href="patient_login.php">پنل بیماران</a>
             <a class="button" href="logout.php">خروج</a>
         </div>
         <div id="main">
