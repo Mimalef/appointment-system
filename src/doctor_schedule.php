@@ -1,13 +1,7 @@
 <?php
-session_start();
-
-include "_conn.php";
+include "_doctor_permission.php";
 include "_header.php";
-
-if(!isset($_SESSION['doctor_id']))
-{
-    header('location: index.php');
-}
+include "_conn.php";
 
 $doctor_id = $_SESSION['doctor_id'];
 
