@@ -6,7 +6,7 @@ include "_header.php";
 
 if(isset($_SESSION['patient_id']))
 {
-    header('location: appointment.php');
+    header('location: patient_panel.php');
 }
 
 if(isset($_GET['submit']))
@@ -22,7 +22,7 @@ if(isset($_GET['submit']))
     {
         $_SESSION["patient_id"] = $res['id'];
 
-        header('location: appointment.php');
+        header('location: patient_panel.php');
     }
     else
     {
