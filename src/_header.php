@@ -15,17 +15,30 @@
         {
             margin-left: auto;
             margin-right: auto;
-            background-color: #40E0D0;
+            background-color: #AAA;
             border-radius: 4px;
         }
-        button
+        .button
         {
-            width: 122px;
-            height: 44px;
-            margin: 14px;
+            display: inline-block;
+            width: 125px;
+            background-color: #0442D8;
+            line-height: 44px;
+            border-radius: 4px;
+            margin-top: 14px;
+            margin-bottom: 14px;
+            margin-left: 7px;
+            margin-right: 7px;
+            text-decoration: none;
+            color: #fff;
+        }
+        .button:hover
+        {
+            background-color: #666;
         }
         img
         {
+            width: 772px;
             border-radius: 4px;
         }
         #orgin
@@ -40,7 +53,6 @@
         #header
         {
             width: 772px;
-            background-color: #40E0D0;
         }
         #tabs
         {
@@ -74,13 +86,13 @@
     <div id="orgin">
         <div id="s"></div>
         <div id="header">
-            <img src="img/cover.png" />
+            <img src="img/cover.jpg" />
         </div>
         <div id="tabs">
-            <a href="index.php"><button id="home">خانه</button></a>
-            <a href="admin_login.php"><button id="gallery">پنل مدیر</button></a>
-            <a href="doctor_login.php"><button id="about">پنل پزشکان</button></a>
-            <a href="patient_login.php"><button id="connect">رزرو وقت</button></a>
-            <a href="logout.php"><button id="connect">خروج</button></button></a>
+            <a class="button" href="index.php">خانه</a>
+            <a class="button" href="admin_login.php">پنل مدیر</a>
+            <a class="button" href="doctor_login.php">پنل پزشکان</a>
+            <a class="button" href="patient_login.php">رزرو وقت</a>
+            <a class="button" href="logout.php">خروج</a>
         </div>
         <div id="main">
