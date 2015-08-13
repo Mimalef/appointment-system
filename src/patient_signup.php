@@ -1,13 +1,19 @@
 <?php
-include "_conn.php";
 include "_header.php";
+include "_conn.php";
 
 if(isset($_GET['submit']))
 {
     $name = $_GET['name'];
     $tel = $_GET['tel'];
 
-    $sql = "INSERT INTO patients VALUES(NULL,'$name','$tel')";
+    $sql = "
+        INSERT INTO
+            patients
+        VALUES(
+            NULL,
+            '$name',
+            '$tel')";
     $res = $db->query($sql);
 
     if($res)
