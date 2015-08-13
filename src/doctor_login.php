@@ -11,7 +11,7 @@ if(isset($_SESSION['doctor_id']))
 
 if(isset($_GET['submit']))
 {
-    $id = $_GET['id'];
+    $user = $_GET['user'];
     $pass = $_GET['pass'];
 
     $sql = "
@@ -20,9 +20,9 @@ if(isset($_GET['submit']))
         FROM
             doctors
         WHERE
-            id='$id'
+            username='$user'
         AND
-            pass='$pass'";
+            password='$pass'";
 
     $res = $db->query($sql);
     $res = $res->fetch();
@@ -41,7 +41,7 @@ if(isset($_GET['submit']))
 ?>
 
 <form>
-    <input name="id" type="text" placeholder="شناسه">
+    <input name="user" type="text" placeholder="شناسه">
     <input name="pass" type="text" placeholder="گذرواژه" >
     <input name="submit" type="submit" value="ورود" >
 </form>
