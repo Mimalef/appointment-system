@@ -5,7 +5,20 @@ include "_conn.php";
 
 $doctor_id = $_SESSION['doctor_id'];
 
-$sql = "SELECT * FROM appointments a JOIN patients p ON a.patient = p.id WHERE doctor = $doctor_id";
+$sql = "
+    SELECT
+        p.name,
+        a.date,
+        a.time
+    FROM
+        appointments a
+    JOIN
+        patients p
+    ON
+        a.patient = p.id
+    WHERE
+        doctor = $doctor_id";
+
 $res = $db->query($sql);
 $res = $res->fetchAll();
 ?>

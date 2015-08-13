@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-include "_conn.php";
 include "_header.php";
+include "_conn.php";
 
 if(!isset($_SESSION['patient_id']))
 {
@@ -16,7 +16,16 @@ if(isset($_GET['submit']))
     $time = $_GET ['time'];
     $date = $_GET ['date'];
 
-    $sql = "INSERT INTO appointments VALUES(NULL,$patient,$doctor,'$date',$time)";
+    $sql = "
+        INSERT INTO
+            appointments
+        VALUES(
+            NULL,
+            $patient,
+            $doctor,
+            '$date',
+            $time)";
+
     $res = $db->query($sql);
 
     if($res)
@@ -29,7 +38,13 @@ if(isset($_GET['submit']))
     }
 }
 
-$sql = "SELECT * FROM doctors";
+$sql = "
+    SELECT
+        id,
+        name,
+        specialist
+    FROM
+        doctors";
 
 $res = $db->query($sql);
 $res = $res->fetchAll();

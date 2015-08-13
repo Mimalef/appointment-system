@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-include "_conn.php";
 include "_header.php";
+include "_conn.php";
 
 if(isset($_SESSION['doctor_id']))
 {
@@ -14,7 +14,16 @@ if(isset($_GET['submit']))
     $id = $_GET['id'];
     $pass = $_GET['pass'];
 
-    $sql = "SELECT id FROM doctors WHERE id='$id' AND pass='$pass'";
+    $sql = "
+        SELECT
+            id
+        FROM
+            doctors
+        WHERE
+            id='$id'
+        AND
+            pass='$pass'";
+
     $res = $db->query($sql);
     $res = $res->fetch();
 

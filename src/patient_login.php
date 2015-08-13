@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-include "_conn.php";
 include "_header.php";
+include "_conn.php";
 
 if(isset($_SESSION['patient_id']))
 {
@@ -14,7 +14,16 @@ if(isset($_GET['submit']))
     $id = $_GET['id'];
     $tel = $_GET['tel'];
 
-    $sql = "SELECT id FROM patients WHERE id='$id' AND telephone='$tel'";
+    $sql = "
+        SELECT
+            id
+        FROM
+            patients
+        WHERE
+            id='$id'
+        AND
+            telephone='$tel'";
+
     $res = $db->query($sql);
     $res = $res->fetch();
 
