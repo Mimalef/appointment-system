@@ -6,7 +6,7 @@ include "_header.php";
 
 if(isset($_SESSION['admin_id']))
 {
-    header('location: doctor_signup.php');
+    header('location: admin_panel.php');
 }
 
 if(isset($_GET['submit']))
@@ -22,7 +22,7 @@ if(isset($_GET['submit']))
     {
         $_SESSION["admin_id"] = $res['id'];
 
-        header('location: doctor_signup.php');
+        header('location: admin_panel.php');
     }
     else
     {
