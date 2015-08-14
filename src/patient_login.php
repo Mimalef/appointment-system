@@ -41,8 +41,8 @@ if(isset($_GET['submit']))
 ?>
 
 <form>
-    <input name="user" type="text" placeholder="شناسه">
-    <input name="pass" type="text" placeholder="تلفن">
+    <input name="user" type="text" placeholder="کاربری">
+    <input name="pass" type="text" placeholder="گذرواژه" >
     <input name="submit" type="submit" value="ورود" >
     <p>یا از <a href="patient_signup.php">اینجا</a> ثبت نام کنید.</p>
 </form>

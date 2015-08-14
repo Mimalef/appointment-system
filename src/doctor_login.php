@@ -41,7 +41,7 @@ if(isset($_GET['submit']))
 ?>
 
 <form>
-    <input name="user" type="text" placeholder="شناسه">
+    <input name="user" type="text" placeholder="کاربری">
     <input name="pass" type="text" placeholder="گذرواژه" >
     <input name="submit" type="submit" value="ورود" >
 </form>
