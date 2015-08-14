@@ -1,17 +1,24 @@
 <?php
-session_start();
-
-include "_conn.php";
+include "_doctor_permission.php";
 include "_header.php";
-
-if(!isset($_SESSION['doctor_id']))
-{
-    header('location: index.php');
-}
+include "_conn.php";
 
 $doctor_id = $_SESSION['doctor_id'];
 
-$sql = "SELECT * FROM appointments a JOIN patients p ON a.patient = p.id WHERE doctor = $doctor_id";
+$sql = "
+    SELECT
+        p.name,
+        a.date,
+        a.time
+    FROM
+        appointments a
+    JOIN
+        patients p
+    ON
+        a.patient = p.id
+    WHERE
+        doctor = $doctor_id";
+
 $res = $db->query($sql);
 $res = $res->fetchAll();
 ?>

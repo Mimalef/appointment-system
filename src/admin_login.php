@@ -1,12 +1,12 @@
 <?php
 session_start();
 
-include "_conn.php";
 include "_header.php";
+include "_conn.php";
 
 if(isset($_SESSION['admin_id']))
 {
-    header('location: doctor_signup.php');
+    header('location: admin_panel.php');
 }
 
 if(isset($_GET['submit']))
@@ -14,7 +14,16 @@ if(isset($_GET['submit']))
     $user = $_GET['user'];
     $pass = $_GET['pass'];
 
-    $sql = "SELECT id FROM admins WHERE user='$user' AND pass='$pass'";
+    $sql = "
+        SELECT
+            id
+        FROM
+            admins
+        WHERE
+            user='$user'
+        AND
+            pass='$pass'";
+
     $res = $db->query($sql);
     $res = $res->fetch();
 
@@ -22,7 +31,7 @@ if(isset($_GET['submit']))
     {
         $_SESSION["admin_id"] = $res['id'];
 
-        header('location: doctor_signup.php');
+        header('location: admin_panel.php');
     }
     else
     {

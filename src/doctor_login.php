@@ -1,20 +1,29 @@
 <?php
 session_start();
 
-include "_conn.php";
 include "_header.php";
+include "_conn.php";
 
 if(isset($_SESSION['doctor_id']))
 {
-    header('location: schedule.php');
+    header('location: doctor_panel.php');
 }
 
 if(isset($_GET['submit']))
 {
-    $id = $_GET['id'];
+    $user = $_GET['user'];
     $pass = $_GET['pass'];
 
-    $sql = "SELECT id FROM doctors WHERE id='$id' AND pass='$pass'";
+    $sql = "
+        SELECT
+            id
+        FROM
+            doctors
+        WHERE
+            username='$user'
+        AND
+            password='$pass'";
+
     $res = $db->query($sql);
     $res = $res->fetch();
 
@@ -22,7 +31,7 @@ if(isset($_GET['submit']))
     {
         $_SESSION["doctor_id"] = $res['id'];
 
-        header('location: schedule.php');
+        header('location: doctor_panel.php');
     }
     else
     {
@@ -32,7 +41,7 @@ if(isset($_GET['submit']))
 ?>
 
 <form>
-    <input name="id" type="text" placeholder="شناسه">
+    <input name="user" type="text" placeholder="کاربری">
     <input name="pass" type="text" placeholder="گذرواژه" >
     <input name="submit" type="submit" value="ورود" >
 </form>
