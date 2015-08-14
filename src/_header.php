@@ -18,6 +18,17 @@
             background-color: #AAA;
             border-radius: 4px;
         }
+        img
+        {
+            width: 772px;
+            border-radius: 4px;
+        }
+        input {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 8px;
+        }
         .button
         {
             display: inline-block;
@@ -35,11 +46,6 @@
         .button:hover
         {
             background-color: #666;
-        }
-        img
-        {
-            width: 772px;
-            border-radius: 4px;
         }
         #orgin
         {
