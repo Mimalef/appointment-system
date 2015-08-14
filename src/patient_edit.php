@@ -19,7 +19,7 @@ if(isset($_GET['submit']))
         SET
             name='$name',
             username='$user',
-            password='$password',
+            password='$pass',
             telephone=$tele,
             email=$email
         WHERE
@@ -59,7 +59,7 @@ $res = $res->fetch();
     <input name="pass" type="text" value="<?php echo $res['password'] ?>" placeholder="گذرواژه" >
     <input name="email" type="text" value="<?php echo $res['email'] ?>" placeholder="ایمیل" >
     <input name="tele" type="text" value="<?php echo $res['telephone'] ?>" placeholder="تلفن" >
-    <input name="submit" type="submit"  value="ثبت" >
+    <input name="submit" type="submit"  value="ویراش" >
 </form>
 
 <?php include "_footer.php"; ?>
