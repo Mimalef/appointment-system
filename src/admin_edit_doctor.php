@@ -3,7 +3,7 @@ if(isset($_GET['submit']))
 {
     if($_GET['username'] && $_GET['password'])
     {        
-        require_once('../conn.php');
+        require_once('_conn.php');
         include "_header.php";
         include "_admin_permission.php";
         $query = $db->prepare("SELECT password FROM doctors WHERE id = ?");
