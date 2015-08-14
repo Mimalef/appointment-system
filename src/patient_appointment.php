@@ -1,13 +1,7 @@
 <?php
-session_start();
-
+include "_patient_permission.php";
 include "_header.php";
 include "_conn.php";
-
-if(!isset($_SESSION['patient_id']))
-{
-    header('location: index.php');
-}
 
 if(isset($_GET['submit']))
 {
