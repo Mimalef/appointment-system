@@ -29,6 +29,18 @@
             margin-right: auto;
             padding: 8px;
         }
+        table
+        {
+            text-align: center;
+            width: 100%;
+        }
+        td {
+            border: 1px solid;
+            margin: 0px;
+            padding: 10px;
+            border-radius: 4px;
+            border-color: #AAA;
+        }
         .button
         {
             display: inline-block;
@@ -80,11 +92,6 @@
             width: 744px;
             background-color: #FFF;
             padding: 14px;
-        }
-        #schedule
-        {
-            text-align: right;
-            width: 100%;
         }
     </style>
 </head>
